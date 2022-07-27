@@ -1,0 +1,16 @@
+<div class="sales-container">
+    <h1>Sales Report</h1>
+    <hr>
+    <div class="scrollmenu-container">
+        <div class="scrollmenu" *ngFor="let row of adminData">
+            <a routerLink="/dashboard/sales/{{row.username}}" 
+               routerLinkActive="active" 
+               [routerLinkActiveOptions]="{exact: true}"
+               (click)="onUsername(row.username)">
+               {{row.username}}</a>
+        </div>
+    </div>    
+    <div class="history-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

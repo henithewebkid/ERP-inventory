@@ -1,0 +1,66 @@
+.navbar {
+  background-color: white;
+}
+.logo {
+  height: 40px;
+  object-fit: contain;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+.error {
+  background-color: black;
+  height: 100%;
+}
+.error-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.error-left {
+  color: white;
+  align-self: center;
+}
+.text-container {
+  width: 500px;
+  margin-top: 30px;
+}
+.error-right {
+  margin-top: 5.5%;
+  margin-bottom: 2%;
+}
+.text-container > h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.text-container > p {
+  font-size: 16px;
+}
+.error-left > p {
+  margin-left: 15%;
+  font-size: 16px;
+}
+.error-left > button {
+  background-color: #ed1c24;
+  margin-left: 22%;
+  width: 40%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.error > footer {
+  background-color: #2b2d2f;
+  margin-top: 14.3px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 11px;
+}

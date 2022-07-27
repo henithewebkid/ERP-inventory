@@ -1,0 +1,24 @@
+<mat-nav-list>
+    <div class="logo">
+      <img src="./assets/kd-logo.png" alt="Company Logo" />
+    </div>
+    <div class="cover"></div>
+    <div class="profile">
+        <img src="./assets/profile.jpg">
+        <h3>{{adminData}}</h3>
+    </div>
+    <hr class="hr">
+    <a mat-list-item 
+       routerLinkActive="list-item-active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="['/branch-dashboard/new-sale']">
+        <mat-icon>store</mat-icon>New Sale
+    </a>
+    <a mat-list-item 
+       routerLinkActive="list-item-active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="['/branch-dashboard/sale-report']">
+        <mat-icon>money</mat-icon>Sale Report
+    </a>
+    
+</mat-nav-list> 

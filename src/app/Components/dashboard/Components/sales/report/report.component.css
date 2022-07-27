@@ -1,0 +1,39 @@
+.table-container {
+  margin: 5%;
+}
+.table-container > h1 {
+  color: #1e3f66;
+  font-size: 30px;
+}
+.back {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1e3f66;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.search-container > form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.search-container > form > input {
+  width: 10%;
+  border-radius: 25px;
+  outline: none;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.table-c {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.action-button {
+  border: none;
+  background-color: transparent;
+  color: #1e3f66;
+}

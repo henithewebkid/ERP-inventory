@@ -1,0 +1,25 @@
+<mat-drawer-container *ngIf="sideBarOpen">
+    <mat-drawer mode="side"  [opened]="sideBarOpen">
+      <!-- <mat-drawer mode="side" opened="true"> -->
+       <app-branch-sidenav></app-branch-sidenav>
+    </mat-drawer>
+    
+    <mat-drawer-content >
+      <app-branch-header (toggleSidebarForMe)="sideBarToggler()"></app-branch-header>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+    
+</mat-drawer-container>
+
+<mat-drawer-container *ngIf="!sideBarOpen">
+  <mat-drawer class="small" mode="side"  [opened]="!sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+     <app-branch-icon-sidenav></app-branch-icon-sidenav>
+  </mat-drawer>
+  
+  <mat-drawer-content >
+    <app-branch-header (toggleSidebarForMe)="sideBarToggler()"></app-branch-header>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+  
+</mat-drawer-container>

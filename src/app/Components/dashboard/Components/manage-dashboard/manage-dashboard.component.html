@@ -1,0 +1,30 @@
+<div class="dashboard-container">
+    <h1>Dashboard</h1>
+    <hr>
+    <div class="box-list">
+        <div class="box-1">
+            <div class="box" routerLink="/dashboard/product" >
+                <div class="box-left">
+                    <h1>{{productlength}}</h1>
+                    <h4>Products</h4>
+                </div>
+                <div class="box-right">
+                    <img src="assets/product-icon.png">
+                </div>
+            </div>
+            <button routerLink="/dashboard/product">More info</button>
+        </div>
+        <div class="box-2">
+            <div class="box" routerLink="/dashboard/branch-admin" >
+                <div class="box-left1">
+                    <h1>{{adminlength}}</h1>
+                    <h4>Admin</h4>
+                </div>
+                <div class="box-right1">
+                    <img src="assets/User-icon.png">
+                </div>
+            </div>
+            <button routerLink="/dashboard/branch-admin">More info</button>
+        </div>
+    </div>
+</div>

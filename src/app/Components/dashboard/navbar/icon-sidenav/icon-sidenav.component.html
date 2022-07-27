@@ -1,0 +1,35 @@
+<mat-nav-list>
+    <div class="logo">
+      <img src="./assets/kd-logo-icon.png" alt="Company Logo" />
+    </div>
+    <div class="cover"></div>
+    <div class="profile">
+        <img src="./assets/profile.jpg">
+    </div>
+    <hr class="hr">
+    <a mat-list-item 
+       routerLinkActive="list-item-active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="['/dashboard']">
+      <mat-icon>dashboard</mat-icon>
+    </a>
+    <a mat-list-item 
+       routerLinkActive="list-item-active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="['/dashboard/branch-admin']">
+      <mat-icon>people</mat-icon>
+    </a>
+    <a mat-list-item 
+       routerLinkActive="list-item-active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="['/dashboard/product']">
+        <mat-icon>store</mat-icon>
+    </a>
+    <a mat-list-item 
+       routerLinkActive="list-item-active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="['/dashboard/sales']">
+        <mat-icon>money</mat-icon>
+    </a>
+    
+</mat-nav-list> 

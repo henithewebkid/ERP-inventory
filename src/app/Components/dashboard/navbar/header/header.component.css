@@ -1,0 +1,40 @@
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mat-toolbar > ul > li {
+  list-style: none;
+}
+.mat-toolbar-row > button {
+  outline: none;
+  border: 0;
+  background: transparent;
+  color: white;
+}
+.user {
+  font-size: 14px;
+}
+.mat-toolbar {
+  background: #31baf5;
+}
+.user-image {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+.tool {
+  justify-content: space-between;
+}
+.user-image > icon {
+  height: 18px;
+  font-size: 16px;
+}
+.mat-menu-content {
+  width: 160px;
+}
+.expand {
+  margin-left: -5%;
+  cursor: pointer;
+}

@@ -1,0 +1,58 @@
+<div class="add-container">
+    <h1>New Sale</h1>
+    <hr>
+    <form [formGroup]="info">
+        <div formArrayName="sale_report" >
+            <div class="product_lists" *ngFor="let sales of salesReports().controls; let i=index" [formGroupName]="i">
+                <div >
+                    <input type="text" formControlName="productname">
+                    <!-- <select name="productName" formControlName="productname">
+                        <option disabled="disabled" value="">---Product Name---</option>
+                        <option ></option>
+                    </select> -->
+                    <div class="product-size">
+                        <input type="number" placeholder="Width" formControlName="productwidth">
+                        <p>*</p>
+                        <input type="number" placeholder="Height" formControlName="productheight">
+                        <p>*</p>
+                        <input type="number" placeholder="Thickness" formControlName="productthickness">
+                    </div>
+                    <div class="product-price">
+                        <input type="number" placeholder="Amount" formControlName="productamount">
+                        <p> * </p>
+                        <input type="number" placeholder="Price" formControlName="productprice">
+                    </div>
+                    <input type="number" placeholder="Total Price" formControlName="totalprice">
+                    <button class="delete_button" (click)="onDelete(i)"><mat-icon>delete</mat-icon></button>
+                </div>
+            </div>
+        </div>
+        <div class="total_price"[hidden] ="info.get('sale_report')?.value.length === 0">
+            <h1><strong>Total: </strong>{{grandTotal}}</h1>
+        </div>
+        <button [hidden] ="info.get('sale_report')?.value.length === 0" (click)="onSubmit()" class="submit-button" type="submit">Add New Sale</button> 
+    </form>
+</div>
+<div class="listofProduct">
+    <h1>Product List</h1>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="color: '#1e3f66';cursor: pointer" (click)="sort('productName')">Products Name</th>
+                <th style="color: '#1e3f66';">Products Size</th>
+                <th style="color: '#1e3f66';cursor: pointer" (click)="sort('productPrice')">Products Price</th>
+                <th style="color: '#1e3f66';">Action</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr *ngFor="let row of productData | orderBy : key: reverse | paginate: { itemsPerPage: 5, currentPage: p }">
+                <td>{{row.productName}}</td>
+                <td>{{row.productWidth}} * {{row.productHeight}} * {{row.productThickness}}</td>
+                <td>{{row.productPrice}} ETB</td>
+                <td><button class="add_product" (click)="onAddSales(row)">Add</button></td>
+            </tr>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </tbody>
+    </table>
+</div>

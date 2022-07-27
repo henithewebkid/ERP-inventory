@@ -1,0 +1,27 @@
+.sales-container {
+  margin: 5%;
+}
+.sales-container > h1 {
+  color: #1e3f66;
+  font-size: 30px;
+}
+.add-sales {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1e3f66;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.table-container {
+  margin: 5%;
+}
+.action-button {
+  border: none;
+  background-color: transparent;
+  color: #1e3f66;
+}
+.add-container > h1 {
+  color: #1e3f66;
+}

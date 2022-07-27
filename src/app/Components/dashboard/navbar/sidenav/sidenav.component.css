@@ -1,0 +1,58 @@
+.mat-icon {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.logo {
+  padding: 10px;
+  margin-top: -10px;
+}
+.logo > img {
+  margin-left: 40px;
+  width: 150px;
+}
+.cover {
+  padding: 32px;
+  background-color: #31baf5;
+  opacity: 0.5;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+}
+.hr {
+  color: white;
+  margin-bottom: 10px;
+}
+.profile {
+  margin-top: 25px;
+  text-align: center;
+  color: white;
+}
+.profile > img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5px;
+}
+.mat-divider {
+  border-top-width: 2px;
+  border-color: lightgray;
+}
+.mat-list-item {
+  color: white !important;
+  font-size: 0.8rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+}
+.mat-list-item ::hover {
+  color: white !important;
+}
+.mat-list-item-content {
+  border-radius: 5px;
+  margin: 0 8px;
+}
+.list-item-active {
+  color: #31baf5 !important;
+  border-radius: 0px !important;
+}

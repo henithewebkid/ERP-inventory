@@ -1,0 +1,66 @@
+.login-container {
+  height: 100%;
+  background-image: url("../../../assets/login-background.png");
+  display: flex;
+  flex-direction: row;
+}
+.login_form {
+  width: 430px;
+  margin: 130px auto;
+  position: relative;
+}
+.login_form > mat-card > img {
+  width: 250px;
+  margin-left: 80px;
+  margin-right: 90px;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+}
+.form_container > input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.form_container > label {
+  font-size: 14px;
+}
+.button {
+  background-color: #31baf5;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.backdrop {
+  background-color: #f7a7a3;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-left: 10px solid #ed1c24;
+  border-radius: 7px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 0 3px 3px rgb(238, 236, 236);
+}
+.form_container > input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.help-block {
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
+}

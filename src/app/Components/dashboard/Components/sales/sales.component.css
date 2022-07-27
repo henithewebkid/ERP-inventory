@@ -1,0 +1,38 @@
+.sales-container {
+  margin: 5%;
+}
+.sales-container > h1 {
+  color: #1e3f66;
+  font-size: 30px;
+}
+.scrollmenu-container {
+  margin: 5%;
+  background-color: white;
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+  white-space: nowrap;
+}
+.scrollmenu-container::-webkit-scrollbar {
+  width: 0 !important;
+  height: 4px !important;
+  background-color: #777;
+}
+.scrollmenu {
+  display: inline-block;
+  border: 1px solid #1e3f66;
+}
+.scrollmenu > a {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.scrollmenu > a:hover {
+  background-color: #1e3f66;
+  padding: 10px;
+  color: white;
+}
+.active {
+  background-color: #1e3f66;
+  color: white !important;
+}

@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="login_form">
+        <mat-card>
+            <img src="assets/kd-logo-1.png">
+            <hr>
+            <div *ngIf="iserror === true" class="backdrop">
+                <div>{{errors}}</div>
+            </div>
+            <form [formGroup]="login" (ngSubmit)="onLogin()">
+                <div class="form_container">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Username" formControlName='username'>
+                    <span *ngIf="!login.get('username')?.valid && login.get('username')?.touched"
+                    class="help-block">Please enter a valid Username!</span>
+                    <label>Password </label>
+                    <input type="password" id="password" placeholder="Password" formControlName='password'>
+                    <span *ngIf="!login.get('password')?.valid && login.controls.password.errors?.minlength && login.get('password')?.touched"
+                    class="help-block">Password must have at least 8 characters,Please enter a valid password!</span>
+                </div>
+                <button [disabled] ='!login.valid' class="button" >Log in</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="sales-container">
+    <h1>Sale Report</h1>
+    <hr>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="color: '#1e3f66';">Date</th>
+                    <th style="color: '#1e3f66';">Total Price</th>
+                    <th style="color: '#1e3f66';" scope="col">Action</th>
+                </tr>
+            </thead> 
+            <tbody>
+                <tr *ngFor="let row of reportData">
+                    <td>{{row.date}}</td>
+                    <td>{{row.TotalSales}} ETB</td>
+                    <td>
+                        <button class="action-button" (click)="onViewHistory(salesReport,row)"><mat-icon>visibility</mat-icon></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #salesReport>
+    <div class="add-container">
+        <h1>{{singleData.date}} Sales Report</h1>
+        <hr>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="color: '#1e3f66';">Product Name</th>
+                        <th style="color: '#1e3f66';">Product Size</th>
+                        <th style="color: '#1e3f66';">Quantity</th>
+                        <th style="color: '#1e3f66';">Product Price</th>
+                        <th style="color: '#1e3f66';">Total Price</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr *ngFor="let row of singleData.saleReport.sale_report">
+                        <td>{{row.productname}}</td>
+                        <td>{{row.productwidth}} * {{row.productheight}} * {{row.productthickness}}</td>
+                        <td>{{row.productamount}}</td>
+                        <td>{{row.productprice}}</td>
+                        <td>{{row.totalprice}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>{{singleData.TotalSales}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-template>

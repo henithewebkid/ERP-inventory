@@ -1,0 +1,141 @@
+.admin-container {
+  margin: 5%;
+}
+.admin-container > h1 {
+  color: #1e3f66;
+  font-size: 30px;
+}
+.add-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1e3f66;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.action-button {
+  border: none;
+  background-color: transparent;
+  color: #1e3f66;
+}
+.table-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.search-container > form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.search-container > form > input {
+  width: 10%;
+  border-radius: 25px;
+  outline: none;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.add-container > h1 {
+  font-size: 25px;
+  color: #1e3f66;
+}
+.add-container > form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.add-container > form > label {
+  color: #1e3f66;
+  font-size: 16px;
+}
+.add-container > form > input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.add-container > form > div {
+  display: flex;
+  flex-direction: row;
+}
+.add-container > form > div > input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.add-container > form > div > p {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.password {
+  color: red;
+}
+.add-container > form > button {
+  background-color: #1e3f66;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.updateButton {
+  justify-content: space-between;
+}
+.updateButton > button {
+  background-color: #1e3f66;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.deleteBranch {
+  margin-top: 20px;
+  text-align: center;
+}
+.delete {
+  background-color: red;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cancle {
+  background-color: lightgray;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 3%;
+}
+.help-block {
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.add-container > form > input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

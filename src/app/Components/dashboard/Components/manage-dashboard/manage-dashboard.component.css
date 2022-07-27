@@ -1,0 +1,99 @@
+.dashboard-container {
+  margin: 5%;
+}
+.dashboard-container > h1 {
+  color: #1e3f66;
+  font-size: 30px;
+}
+.box-list {
+  display: flex;
+  flex-direction: row;
+}
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100px;
+  background-color: #fd6a02;
+  margin-right: 5%;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.box-left {
+  color: white;
+  margin-left: 10px;
+}
+.box-left > h1 {
+  margin-top: 10%;
+  font-size: 30px;
+  font-weight: bold;
+}
+.box-left > h4 {
+  margin-top: -20%;
+}
+.box-right {
+  width: 70%;
+}
+.box-right > img {
+  margin-top: 3%;
+  width: 90%;
+  object-fit: contain;
+  margin-left: 25%;
+  opacity: 40%;
+}
+.box-right > img:hover {
+  transform: scale(1.2);
+}
+.box-1 > button {
+  background-color: #ff9a53;
+  border: none;
+  color: white;
+}
+.box-1 > button:hover {
+  background-color: #ff7b1d;
+  border: none;
+  color: white;
+}
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  width: 200px !important;
+  height: 100px !important;
+  background-color: #31baf5;
+}
+.box-right1 > img {
+  margin-top: 5%;
+  width: 40%;
+  object-fit: contain;
+  margin-left: 50%;
+  opacity: 60%;
+}
+.box-right1 > img:hover {
+  transform: scale(1.1);
+}
+.box-left1 {
+  color: white;
+  margin-left: 10px;
+}
+.box-left1 > h1 {
+  margin-top: 10%;
+  font-size: 30px;
+  font-weight: bold;
+}
+.box-left1 > h4 {
+  margin-top: -22%;
+}
+.box-2 > button {
+  background-color: #71ccf3;
+  border: none;
+  color: white;
+}
+.box-2 > button:hover {
+  background-color: #4ec4f7;
+  border: none;
+  color: white;
+}

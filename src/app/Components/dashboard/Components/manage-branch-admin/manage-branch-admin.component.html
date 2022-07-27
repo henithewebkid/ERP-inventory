@@ -1,0 +1,90 @@
+<div class="admin-container">
+    <h1>Branch Admin</h1> 
+    <hr>
+    <button class="add-button" (click)="onAddBranchAdmin(addBranchAdmin)"><mat-icon>add</mat-icon></button>
+    <div class="search-container">
+        <form class="form-inline md-form form-sm active-purple-2">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" [(ngModel)]="term" name="term" >
+          </form>
+    </div>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="color: '#1e3f66';cursor: pointer" (click)="sort('username')">Branch Username</th>
+                    <th style="color: '#1e3f66';cursor: pointer" (click)="sort('location')">Branch Location</th>
+                    <th style="color: '#1e3f66';" scope="col">Action</th>
+                </tr>
+            </thead> 
+            <tbody>
+                <tr *ngFor="let row of adminData | filter:term | orderBy : key: reverse | paginate: { itemsPerPage: 5, currentPage: p }">
+                    <td>{{row.username}}</td>
+                    <td>{{row.location}}</td>
+                    <td>
+                        <button class="action-button"(click)="onUpdateBranchAdmin(updateBranchAdmin,row)"><mat-icon>visibility</mat-icon></button>
+                        <button class="action-button"(click)="onDeleteBranchAdmin(deleteBranchAdmin,row)"><mat-icon>delete</mat-icon></button>
+                    </td>
+                </tr>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </tbody>
+        </table>
+    </div>
+</div>
+<ng-template #addBranchAdmin>
+    <div class="add-container">
+        <h1>Add New Branch Admin</h1>
+        <hr>
+        <form [formGroup]="adminForm">
+            <label>Branch Username</label>
+            <input type="text" placeholder="Enter Branch Username" formControlName="username">
+            <span *ngIf="!adminForm.get('username')?.valid && adminForm.get('username')?.touched"
+                   class="help-block">Please enter a valid Username!</span> 
+            <label> Branch Location</label>
+            <input type="text" placeholder="Enter Branch Location" formControlName="location">
+            <span *ngIf="!adminForm.get('location')?.valid && adminForm.get('location')?.touched"
+                   class="help-block">Please enter a valid Location!</span> 
+            <label> Branch Password</label>
+            <div>
+                <input type="password" disabled value="kesteDamena@13579," > 
+                <p><strong>Hint: </strong>Default password is <strong class="password">kesteDamena@13579,</strong></p>
+            
+            </div>
+            <button [disabled] ='!adminForm.valid' (click)="addNewAdmin()">Save</button>
+        </form>
+    </div>
+
+</ng-template>
+<ng-template #updateBranchAdmin>
+    <div class="add-container">
+        <h1>Update Branch Admin</h1>
+        <hr>
+        <form [formGroup]="adminForm">
+            <label>Branch Username</label>
+            <input type="text" placeholder="Enter Branch Username"  formControlName="username">
+            <span *ngIf="!adminForm.get('username')?.valid && adminForm.get('username')?.touched"
+                  class="help-block">Please enter a valid Username!</span> 
+            <label> Branch Location</label>
+            <input type="text" placeholder="Enter Branch Location"  formControlName="location">
+            <span *ngIf="!adminForm.get('location')?.valid && adminForm.get('location')?.touched"
+                   class="help-block">Please enter a valid Location!</span> 
+            <label> Branch Password</label>
+            <input type="password" disabled value="kesteDamena@13579,"> 
+            
+            <div class="updateButton">
+                <button [disabled] ='!adminForm.valid' (click)="updateAdmin()">Update</button>
+                <button [disabled] ='!adminForm.valid' (click)="onRestPassword()">Rest Password</button>
+            </div>
+        </form>
+    </div>
+
+</ng-template>
+<ng-template #deleteBranchAdmin>
+    <div class="deleteBranch">
+        <h3>Are you sure you want to delete this Branch Admin?</h3>
+        <div>
+            <button (click)="onDelete()" class="delete">Delete</button>
+            <button (click)="onCancle()" class="cancle">Cancle</button>
+        </div>
+    </div>
+    
+</ng-template>
